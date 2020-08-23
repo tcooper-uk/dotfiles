@@ -1,0 +1,6 @@
+brew 'hub'
+brew 'maven'
+brew 'node'
+brew 'htop'
+
+cask 'iterm2'
