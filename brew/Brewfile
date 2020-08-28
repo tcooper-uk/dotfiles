@@ -1,6 +1,8 @@
+brew 'git'
 brew 'hub'
 brew 'maven'
 brew 'node'
 brew 'htop'
+brew 'openjdk'
 
 cask 'iterm2'
