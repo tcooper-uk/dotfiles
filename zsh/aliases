@@ -1,0 +1,4 @@
+alias diff='diff-so-fancy'
+alias ll='ls -l'
+alias git='hub'
+alias htop='sudo htop'

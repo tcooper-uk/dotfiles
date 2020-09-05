@@ -1,5 +1,6 @@
 brew 'git'
 brew 'hub'
+brew 'diff-so-fancy'
 brew 'maven'
 brew 'node'
 brew 'htop'
