@@ -15,6 +15,10 @@ then
     echo "$ZSHRC_FILE does not exist."
     cp $DIR/zshrc ~/.zshrc
 else
-    cat $DIR/zshrc >> ~/.zshrc
+
+    # add aliases if required
+    if ! grep "source ~/.aliases" $ZSHRC_FILE; then
+        cat $DIR/zshrc >> ~/.zshrc
+    fi
 fi
 

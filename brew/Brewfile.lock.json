@@ -121,6 +121,30 @@
         "options": {
           "full_name": "iterm2"
         }
+      },
+      "spotify": {
+        "version": "latest",
+        "options": {
+          "full_name": "spotify"
+        }
+      },
+      "postman": {
+        "version": "7.31.0",
+        "options": {
+          "full_name": "postman"
+        }
+      },
+      "docker": {
+        "version": "2.3.0.4,46911",
+        "options": {
+          "full_name": "docker"
+        }
+      },
+      "intellij-idea-ce": {
+        "version": "2020.2,202.6397.94",
+        "options": {
+          "full_name": "intellij-idea-ce"
+        }
       }
     }
   },
@@ -129,7 +153,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.4.16",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "98ce016cf817beea3ddfb9b57e3c97e342f9da23",
+        "Homebrew/homebrew-core": "52679329c9fbdf14eb5391df8c69443740618881",
         "CLT": "12.0.0.0.1.1597368733",
         "Xcode": "12.0",
         "macOS": "10.15.6"
