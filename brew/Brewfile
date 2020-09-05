@@ -7,3 +7,7 @@ brew 'htop'
 brew 'openjdk'
 
 cask 'iterm2'
+cask 'spotify'
+cask 'postman'
+cask 'docker'
+cask 'intellij-idea-ce'
