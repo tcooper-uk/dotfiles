@@ -9,6 +9,7 @@ brew 'htop'
 brew 'openjdk'
 brew 'exa'
 brew 'postgresql'
+brew 'python'
 
 cask 'iterm2'
 cask 'spotify'
