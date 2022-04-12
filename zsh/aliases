@@ -6,3 +6,5 @@ alias gpull='msg=$(git log -1 --pretty=%B); hub pull-request --browse -m $msg -m
 alias kc='kubectx'
 alias ku='kubectl'
 alias kns='kubens'
+alias td=/Users/tom.cooper/tcode/go-todo/go-todo
+alias pulls='open https://github.com/pulls'

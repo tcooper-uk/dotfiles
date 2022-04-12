@@ -10,6 +10,7 @@ brew 'openjdk'
 brew 'exa'
 brew 'postgresql'
 brew 'python'
+brew 'go'
 
 cask 'iterm2'
 cask 'spotify'
