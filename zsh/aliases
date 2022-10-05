@@ -1,10 +1,33 @@
+# raise a PR using the PR template.
+function raise_pr() {
+
+    # find the root of the current repo
+    root=$(git rev-parse --show-toplevel)
+
+    # make sure we have an upstream
+    git push --set-upstream origin $(git branch --show-current);
+
+    # build the PR body
+    template="$root/.github/pull_request_template.md"
+    if test -f "$template"; then
+        body=$(cat $template)
+    else
+        body="### Change summary"
+    fi
+
+    # raise the PR
+    msg=$(git log -1 --pretty=%B);
+    hub pull-request --browse -m $msg -m $body -m $msg
+}
+
 alias diff='diff-so-fancy'
 alias ll='ls -l'
 alias git='hub'
 alias htop='sudo htop'
-alias gpull='msg=$(git log -1 --pretty=%B); hub pull-request --browse -m $msg -m $msg'
+alias pull='raise_pr'
+alias gpull='raise_pr'
 alias kc='kubectx'
 alias ku='kubectl'
 alias kns='kubens'
-alias td=/Users/tom.cooper/tcode/go-todo/go-todo
+alias td=/Users/tom.cooper/tcode/go-todo/bin/macos/todo
 alias pulls='open https://github.com/pulls'
