@@ -7,7 +7,7 @@ function raise_pr() {
     # make sure we have an upstream
     git push --set-upstream origin $(git branch --show-current);
 
-    # build the PR body
+    # build the PR body template
     template="$root/.github/pull_request_template.md"
     if test -f "$template"; then
         body=$(cat $template)
@@ -15,9 +15,16 @@ function raise_pr() {
         body="### Change summary"
     fi
 
+    # edit the pr body
+    echo $body >> .prbody.md
+    echo "Update your PR description then save and close to continue..."
+    code .prbody.md -w
+    body=$(cat .prbody.md)
+    rm .prbody.md
+
     # raise the PR
     msg=$(git log -1 --pretty=%B);
-    hub pull-request --browse -m $msg -m $body -m $msg
+    hub pull-request --browse -m $msg -m $body
 }
 
 alias diff='diff-so-fancy'
